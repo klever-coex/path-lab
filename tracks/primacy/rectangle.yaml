@@ -1,0 +1,57 @@
+# Level square/rectangular course; two identical gates per side.
+track:
+  name: primacy_rectangle
+  start_pos: [0.0, 0.0, 2.0]
+  start_yaw: 0.0
+  arena:
+    min: [-6.0, -6.0, 0.0]
+    max: [30.0, 18.0, 5.0]
+  gates:
+    - center: [8.0, 0.0, 2.0]
+      normal: [1.0, 0.0, 0.0]
+      size: [2.0, 2.0]
+      shape: rect
+    - center: [16.0, 0.0, 2.0]
+      normal: [1.0, 0.0, 0.0]
+      size: [2.0, 2.0]
+      shape: rect
+    - center: [24.0, 4.0, 2.0]
+      normal: [0.0, 1.0, 0.0]
+      size: [2.0, 2.0]
+      shape: rect
+    - center: [24.0, 8.0, 2.0]
+      normal: [0.0, 1.0, 0.0]
+      size: [2.0, 2.0]
+      shape: rect
+    - center: [16.0, 12.0, 2.0]
+      normal: [-1.0, 0.0, 0.0]
+      size: [2.0, 2.0]
+      shape: rect
+    - center: [8.0, 12.0, 2.0]
+      normal: [-1.0, 0.0, 0.0]
+      size: [2.0, 2.0]
+      shape: rect
+    - center: [0.0, 8.0, 2.0]
+      normal: [0.0, -1.0, 0.0]
+      size: [2.0, 2.0]
+      shape: rect
+    - center: [0.0, 4.0, 2.0]
+      normal: [0.0, -1.0, 0.0]
+      size: [2.0, 2.0]
+      shape: rect
+constraints:
+  v_max: 18.0
+  a_max: 30.0
+  tilt_max_deg: 170.0
+  j_max: 2000.0
+  gate_margin: 0.1
+  collision_radius: 0.06
+  collision_margin: 0.02
+  start_tol: 0.05
+  start_vel_tol: 0.1
+  z_min: 0.3
+timing:
+  dt_max: 0.01
+  t_max: 60.0
+  tail_after_last_gate: 0.3
+drone: racer

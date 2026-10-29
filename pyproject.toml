@@ -1,0 +1,30 @@
+[project]
+name = "clover2gym"
+version = "0.1.0"
+description = "PyBullet-based framework for building drone programming competition tasks"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pyyaml>=6.0",
+    "pybullet>=3.2.6",
+    "typer>=0.27.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "matplotlib>=3.8"]
+viz = ["matplotlib>=3.8"]
+
+[tool.uv.extra-build-variables]
+pybullet = { CFLAGS = "-Dfdopen=fdopen" }
+
+[project.scripts]
+clover2gym = "clover2gym.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
